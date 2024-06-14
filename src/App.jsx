@@ -1,13 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { RegistrationForm } from "./pages/register"
-import { UserList } from "./pages/list"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { RegistrationForm } from "./pages/Register/RegisterForm";
+import { UserList } from "./pages/List/UserList";
+import { EditUserForm } from "./pages/Edit/EditUserForm";
 
 export const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/usuario/criar" element={<RegistrationForm />} />
         <Route path="/" element={<UserList />} />
+        <Route path="/usuario/editar/:id" element={<EditUserForm />} />
+        <Route path="/usuario/criar" element={<RegistrationForm />} />
       </Routes>
     </Router>
   );
