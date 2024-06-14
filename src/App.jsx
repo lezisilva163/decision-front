@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { RegistrationForm } from "./pages/Register/RegisterForm";
 import { UserList } from "./pages/List/UserList";
-import { EditUserForm } from "./pages/Edit/EditUserForm";
+import { EditUserForm } from "./pages/Update/EditUserForm";
 
 export const App = () => {
   return (

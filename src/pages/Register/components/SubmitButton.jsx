@@ -9,7 +9,7 @@ export const SubmitButton = ({ submitting }) => (
     disabled={submitting}
     style={{ marginTop: "16px" }}
   >
-    Cadastrar
+    Sign Up
   </Button>
 );
 

@@ -13,8 +13,8 @@ const StyledEditButton = styled(Button)(({ theme }) => ({
 }));
 
 export const EditButton = ({ onClick }) => (
-  <StyledEditButton onClick={onClick}>
-    <EditIcon />
+  <StyledEditButton size="small" onClick={onClick}>
+    <EditIcon fontSize="small" />
   </StyledEditButton>
 );
 

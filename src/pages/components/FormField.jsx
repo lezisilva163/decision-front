@@ -15,7 +15,13 @@ export const FormField = ({ name, label, type }) => {
           fullWidth
           margin="normal"
           InputLabelProps={type === "date" ? { shrink: true } : undefined}
-          inputProps={type === "date" ? { max: today } : undefined} // Define a data máxima para hoje se o type for date
+          inputProps={
+            type === "date"
+              ? {
+                  max: today,
+                }
+              : undefined
+          } // Define a data máxima para hoje se o type for date
           error={meta.touched && meta.error}
           helperText={meta.touched && meta.error}
         />

@@ -13,8 +13,8 @@ const StyledDeleteButton = styled(Button)(({ theme }) => ({
 }));
 
 export const DeleteButton = ({ onClick }) => (
-  <StyledDeleteButton onClick={onClick}>
-    <DeleteIcon />
+  <StyledDeleteButton size="small" onClick={onClick}>
+    <DeleteIcon fontSize="small" />
   </StyledDeleteButton>
 );
 
