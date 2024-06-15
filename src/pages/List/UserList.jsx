@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Typography, Button, Paper, Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { UserTable } from "./components/UserTable";
 import { fetchUsers, removeUser } from "./api";
+import { Box, Typography, Button, Paper, TableContainer } from "@mui/material";
+import { UserTable } from "./components/UserTable";
 
 export const UserList = () => {
   const [users, setUsers] = useState([]);
@@ -37,55 +37,24 @@ export const UserList = () => {
   return (
     <>
       {users && (
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Paper
-            elevation={3}
-            sx={{
-              width: "100%",
-              maxWidth: "90%",
-              padding: "1rem",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginBottom: "10px",
-                padding: "1rem",
-              }}
-            >
-              <Typography
-                component={"h2"}
-                variant="h5"
-                color="primary"
-                style={{ marginBottom: "1rem" }}
-              >
+        <Box sx={{ width: "100%", padding: 4 }}>
+          <TableContainer component={Paper}>
+            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+              <Typography variant="h5" sx={{ padding: 2, fontWeight: "bold" }}>
                 Lista de Usuários
               </Typography>
               <Button
                 size="small"
-                variant="contained"
+                variant="outlined"
                 color="primary"
                 href="/usuario/criar"
+                sx={{ margin: 2 }}
               >
                 Cadastrar
               </Button>
-            </div>
-            <div style={{ padding: "1rem" }}>
-              <UserTable
-                users={users}
-                onEdit={editUser}
-                onDelete={deleteUser}
-              />
-            </div>
-          </Paper>
+            </Box>
+            <UserTable users={users} onEdit={editUser} onDelete={deleteUser} />
+          </TableContainer>
         </Box>
       )}
     </>

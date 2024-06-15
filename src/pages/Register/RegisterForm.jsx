@@ -1,4 +1,4 @@
-import { Container, Box, Typography } from "@mui/material";
+import { Container, Box, Typography, Paper } from "@mui/material";
 import { Form } from "react-final-form";
 import { useNavigate } from "react-router-dom";
 import { FormField } from "../components/FormField";
@@ -31,6 +31,7 @@ export const RegistrationForm = () => {
       }}
     >
       <Container
+        component={Paper}
         sx={{
           width: "25%",
           maxWidth: "200px", // Limita a largura do contêiner
@@ -53,12 +54,12 @@ export const RegistrationForm = () => {
         >
           <LockIcon
             sx={{
-              fontSize: "2rem",
+              fontSize: "3rem",
               color: theme.palette.primary.main,
               padding: 1,
             }}
           />
-          <Typography variant="h5" sx={{ textAlign: "center" }}>
+          <Typography variant="h5" textAlign={"center"}>
             Sign Up
           </Typography>
         </Box>

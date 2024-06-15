@@ -3,13 +3,12 @@ import PropTypes from "prop-types";
 export const SubmitButton = ({ submitting }) => (
   <Button
     type="submit"
-    variant="contained"
-    color="primary"
+    variant="outlined"
     fullWidth
     disabled={submitting}
-    style={{ marginTop: "16px" }}
+    style={{ marginTop: "1rem" }}
   >
-    Sign Up
+    Cadastrar
   </Button>
 );
 

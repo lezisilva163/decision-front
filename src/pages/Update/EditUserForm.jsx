@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Container, Button, Box, Typography } from "@mui/material";
+import { Container, Button, Box, Typography, Paper } from "@mui/material";
 import { Form } from "react-final-form";
 import { getUser, updateUser } from "./api";
 import { validate } from "../../utils/validation";
@@ -55,6 +55,7 @@ export const EditUserForm = () => {
       }}
     >
       <Container
+        component={Paper}
         sx={{
           width: "25%",
           maxWidth: "200px",
@@ -77,7 +78,7 @@ export const EditUserForm = () => {
         >
           <LockOpenIcon
             sx={{
-              fontSize: "2rem",
+              fontSize: "3rem",
               color: theme.palette.primary.main,
               padding: 1,
             }}

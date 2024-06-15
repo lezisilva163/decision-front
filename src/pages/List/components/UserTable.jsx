@@ -9,13 +9,19 @@ import {
 import { UserTableRow } from "./UserTableRow";
 
 export const UserTable = ({ users, onEdit, onDelete }) => (
-  <Table size="small">
+  <Table sx={{ minWidth: 650 }} aria-label="simple table">
     <TableHead>
       <TableRow>
-        <TableCell sx={{ fontWeight: "bold" }}>Nome</TableCell>
-        <TableCell sx={{ fontWeight: "bold" }}>Data de Nascimento</TableCell>
-        <TableCell sx={{ fontWeight: "bold" }}>Nome da mãe</TableCell>
-        <TableCell sx={{ fontWeight: "bold" }}>Ações</TableCell>
+        <TableCell fontWeight="bold">Nome</TableCell>
+        <TableCell align="center" fontWeight="bold">
+          Data de Nascimento
+        </TableCell>
+        <TableCell align="center" fontWeight="bold">
+          Nome da mãe
+        </TableCell>
+        <TableCell align="center" fontWeight="bold">
+          Ações
+        </TableCell>
       </TableRow>
     </TableHead>
     <TableBody>
